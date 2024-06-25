@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
@@ -23,6 +23,9 @@ function App() {
   return (
     <div className="App">
       <button onClick={handleClick}>Click Me</button>
+
+      <button><Link to={"/signup"} >Sign up</Link></button>
+      {/* <button><Link to={"/signup"} >Sign up</Link></button> */}
 
       <Routes>
         <Route path='/' element={<Home />} />
